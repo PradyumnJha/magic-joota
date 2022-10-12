@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS + Custom CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
+  <link rel="stylesheet" href="index.css" />
+
+  <!-- Fontawesome code -->
+  <script src="https://kit.fontawesome.com/2945cf1a53.js" crossorigin="anonymous"></script>
+
+  <title>Magic Joota</title>
+  <link rel="icon" href="images/Magic Joota.png">
+</head>
+
+<body onload="setTotalQuantity()">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><img src="images/logo.svg" alt="" class="src"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto" style="text-align: center">
+          <li class="nav-item">
+            <a class="nav-link" href="#home"><i class="fa-solid fa-house"></i></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#products"><i class="fa fa-shop"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#bestsellers"><i class="fa-solid fa-heart"></i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#cart"><i class="fa-solid fa-cart-shopping"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section id="section1">
+    <div class="container-fluid" id="main">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12" id="mainCol1">
+          <h1>
+            Hunting for <br />
+            <span class="mainHeadingSpan">comfy-N-cool</span> <br />Sneakers?
+          </h1>
+          <button type="button" class="btn btn-outline-warninge btn-lg">
+            <a style="color: inherit; text-decoration: none;" href="#products">Shop Now <i class="fa-solid fa-cart-shopping"></i></a>
+          </button>
+        </div>
+
+        <div class="col-lg-6 col-md-0 col-sm-0" id="mainCol2">
+          <img src="images/shoesImage.webp" id="shoesImage" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products">
+    <h1 class="section-heading">New <span class="orange">Trendz</span></h1>
+    <div class="row shoeCardHolder">
+      <div class="col col-sm-12 col-md-6 col-lg-4">
+        <div class="card text-bg-danger mb-3" style="width: 18rem">
+          <img src="https://m.media-amazon.com/images/I/81AQ8yDvLdS._SX695._SX._UX._SY._UY_.jpg" class="card-img-top"
+            alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Symbol Classic Men's Sneaker</h5>
+            <p class="card-text">
+              Indulge in comfort and timeless styles with Symbol, from a brand
+              that offers a wide range of footwears for you and your family.
+            </p>
+            <p class="price">Price - ₹1379</p>
+            <button class="btn-outline-dark btn" onclick="increment('p1'), disable('b1')"  id="b1" >
+              Add To Cart <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-sm-12 col-md-6 col-lg-4">
+        <div class="card text-bg-danger mb-3" style="width: 18rem">
+          <img src="https://m.media-amazon.com/images/I/712XuvGI2ML._UX695_.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Bond Street Men's Sneaker</h5>
+            <p class="card-text">
+              Indulge in comfort and timeless styles with Bond Street, from a
+              brand that offers a wide range of footwears for you and your
+              family.
+            </p>
+
+            <p class="price">Price - ₹999</p>
+            <button class="btn-outline-dark btn"  onclick="increment('p2'), disable('b2')"  id="b2" >
+              Add To Cart <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-sm-12 col-md-6 col-lg-4">
+        <div class="card text-bg-danger mb-3" style="width: 18rem">
+          <img src="https://m.media-amazon.com/images/I/81nohZIBxvL._UY695_.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Aesthetic Glow Men's Sneaker</h5>
+            <p class="card-text">
+              Indulge in comfort and timeless styles with Aesthetic Glow, from
+              a brand that offers a wide range of footwears for you and your
+              family.
+            </p>
+
+            <p class="price">Price - ₹1299</p>
+            <button class="btn-outline-dark btn"  onclick="increment('p3'), disable('b3')"  id="b3" >
+              Add To Cart <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-sm-12 col-md-6 col-lg-4">
+        <div class="card text-bg-danger mb-3" style="width: 18rem">
+          <img src="https://m.media-amazon.com/images/I/81nHoypfANL._UX695_.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Symbol Classic Women's Sneaker</h5>
+            <p class="card-text">
+              Indulge in comfort and timeless styles with Symbol, from a brand
+              that offers a wide range of footwears for you and your family.
+            </p>
+            <p class="price">Price - ₹1486</p>
+            <button class="btn-outline-dark btn"  onclick="increment('p4'), disable('b4')"  id="b4" >
+              Add To Cart <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-sm-12 col-md-6 col-lg-4">
+        <div class="card text-bg-danger mb-3" style="width: 18rem">
+          <img src="https://m.media-amazon.com/images/I/71+TZ2mYu3L._SY695._SX._UX._SY._UY_.jpg" class="card-img-top"
+            alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Bond Street Women's Sneaker</h5>
+            <p class="card-text">
+              Indulge in comfort and timeless styles with Bond Street, from a
+              brand that offers a wide range of footwears for you and your
+              family.
+            </p>
+
+            <p class="price">Price - ₹832</p>
+            <button class="btn-outline-dark btn"  onclick="increment('p5'), disable('b5')"  id="b5">
+              Add To Cart <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-sm-12 col-md-6 col-lg-4">
+        <div class="card text-bg-danger mb-3" style="width: 18rem">
+          <img src="https://m.media-amazon.com/images/I/410NFrzDJdL.jpg" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title">Aesthetic Glow Women's Sneaker</h5>
+            <p class="card-text">
+              Indulge in comfort and timeless styles with Aesthetic Glow, from
+              a brand that offers a wide range of footwears for you and your
+              family.
+            </p>
+
+            <p class="price">Price - ₹2499</p>
+            <button class="btn-outline-dark btn" onclick="increment('p6'), disable('b6')"  id="b6">
+              Add To Cart <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section id="bestsellers">
+    <h1 class="section-heading"><span class="orange">Bestsellers</span></h1>
+    <div class="row">
+      <div class="col mainBScol">
+        <h2>Men's Bestseller</h2>
+        <div class="imgRow">
+          <div class="imgColumn">
+            <img src="images/img_m1.jpg" alt="Men's Premium Sneaker"  id="m1"  style="width: 100%" onclick="myFunction(this);" />
+          </div>
+          <div class="imgColumn">
+            <img src="images/img_m2.jpg" alt="Men's Premium Sneaker"  id="m2"  style="width: 100%" onclick="myFunction(this);" />
+          </div>
+          <div class="imgColumn">
+            <img src="images/img_m3.jpg" alt="Men's Premium Sneaker"  id="m3"  style="width: 100%" onclick="myFunction(this);" />
+          </div>
+          <div class="imgColumn">
+            <img src="images/img_m4.jpg" alt="Men's Premium Sneaker"  id="m4"  style="width: 100%" onclick="myFunction(this);" />
+          </div>
+        </div>
+
+        <h2>Women's Bestseller</h2>
+        <div class="imgRow">
+          <div class="imgColumn">
+            <img src="images/img_w1.jpg" alt="Women's Premium Sneaker" id="w1" style="width: 100%"
+              onclick="myFunction(this);" />
+          </div>
+          <div class="imgColumn">
+            <img src="images/img_w2.jpg" alt="Women's Premium Sneaker"  id="w2" style="width: 100%"
+              onclick="myFunction(this);" />
+          </div>
+          <div class="imgColumn">
+            <img src="images/img_w3.jpg" alt="Women's Premium Sneaker" id="w3"  style="width: 100%"
+              onclick="myFunction(this);" />
+          </div>
+          <div class="imgColumn">
+            <img src="images/img_w4.jpg" alt="Women's Premium Sneaker"  id="w4"  style="width: 100%"
+              onclick="myFunction(this);" />
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="col mainBScol">
+        <h2></h2>
+        <div class="imgContainer">
+          <img id="expandedImg" src="images/img_m1.jpg">
+          <center>
+            <h2 id="nameHolder">Click on any image beside to get large preview and product details</h2>
+            <p class="price" id="premiumPriceHolder" class="price"></p>
+            <button class="btn-outline-dark btn premiumButton" id="defaultHiddenMen" onclick="increment('p7') , disable('defaultHiddenMen')"  style="display:none">
+              Add To Cart <i class="fa-solid fa-cart-shopping"></i>
+              <button class="btn-outline-dark btn premiumButton" id="defaultHiddenWomen" onclick="increment('p8') , disable('defaultHiddenWomen')" style="display:none">
+              Add To Cart <i class="fa-solid fa-cart-shopping"></i>
+          </center>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+
+  </script>
+
+<hr>
+
+<section id="cart">
+  <h1 class="section-heading">My <span class="orange">Cart</span></h1>
+<div class="row">
+  <div class="col-md-8 col-sm-12" id="cartItemsContainer">
+
+    <div id="p1" class="notDisplayed">
+      <img src="https://m.media-amazon.com/images/I/81AQ8yDvLdS._SX695._SX._UX._SY._UY_.jpg" class="cart-img">
+      <h2 class="cart-productName">Symbol Classic Men's sneaker</h2>
+      <h3 class="cart-productPrice">Price - <span class="priceHolder" id="p1PriceHolder"></span></h3>
+      <h3 class="cart-productPrice"> Quantity - <span id="p1QuantityHolder" class="quantityHolder"></span></h3>
+      <i class="fa-solid fa-plus" onclick="increment('p1')"></i>
+      <i class="fa-solid fa-minus" onclick="decrement('p1')"></i>
+      <h3 class="cart-productPrice">Total Price - <span class="priceHolder" id="p1TotalPriceHolder"></span></h3>
+    </div>
+
+    <div id="p2" class="notDisplayed">
+      <img src="https://m.media-amazon.com/images/I/712XuvGI2ML._UX695_.jpg" class="cart-img">
+      <h2 class="cart-productName">Bond Street Men's Sneaker</h2>
+      <h3 class="cart-productPrice">Price - <span class="priceHolder" id="p2PriceHolder"></span></h3>
+      <h3 class="cart-productPrice"> Quantity - <span id="p2QuantityHolder" class="quantityHolder"></span></h3>
+      <i class="fa-solid fa-plus" onclick="increment('p2')"></i>
+      <i class="fa-solid fa-minus" onclick="decrement('p2')"></i>
+      <h3 class="cart-productPrice">Total Price - <span class="priceHolder" id="p2TotalPriceHolder"></span></h3>
+    </div>
+
+    <div id="p3" class="notDisplayed">
+      <img src="https://m.media-amazon.com/images/I/81nohZIBxvL._UY695_.jpg" class="cart-img">
+      <h2 class="cart-productName">Aesthetic Glow Men's Sneaker</h2>
+      <h3 class="cart-productPrice">Price - <span class="priceHolder" id="p3PriceHolder"></span></h3>
+      <h3 class="cart-productPrice"> Quantity - <span id="p3QuantityHolder" class="quantityHolder"></span>
+      <i class="fa-solid fa-plus" onclick="increment('p3')"></i>
+      <i class="fa-solid fa-minus" onclick="decrement('p3')"></i>
+      </h3>
+      <h3 class="cart-productPrice">Total Price - <span class="priceHolder" id="p3TotalPriceHolder"></span></h3>
+    </div>
+
+    <div id="p4" class="notDisplayed">
+      <img src="https://m.media-amazon.com/images/I/81nHoypfANL._UX695_.jpg" class="cart-img">
+      <h2 class="cart-productName">Symbol Classic Women's Sneaker </h2>
+      <h3 class="cart-productPrice">Price - <span class="priceHolder" id="p4PriceHolder"></span></h3>
+      <h3 class="cart-productPrice"> Quantity - <span id="p4QuantityHolder" class="quantityHolder"></span>
+      <i class="fa-solid fa-plus" onclick="increment('p4')"></i>
+      <i class="fa-solid fa-minus" onclick="decrement('p4')"></i>
+    </h3>
+      <h3 class="cart-productPrice">Total Price - <span class="priceHolder" id="p4TotalPriceHolder"></span></h3>
+    </div>
+
+    <div id="p5" class="notDisplayed">
+      <img src="https://m.media-amazon.com/images/I/71+TZ2mYu3L._SY695._SX._UX._SY._UY_.jpg" class="cart-img">
+      <h2 class="cart-productName">Bond Street Women's Sneaker</h2>
+      <h3 class="cart-productPrice">Price - <span class="priceHolder" id="p5PriceHolder"></span></h3>
+      <h3 class="cart-productPrice"> Quantity - <span id="p5QuantityHolder" class="quantityHolder"></span>
+      <i class="fa-solid fa-plus" onclick="increment('p5')"></i>
+      <i class="fa-solid fa-minus" onclick="decrement('p5')"></i>
+    </h3>
+      <h3 class="cart-productPrice">Total Price - <span class="priceHolder" id="p5TotalPriceHolder"></span></h3>
+    </div>
+
+    <div id="p6" class="notDisplayed">
+      <img src="https://m.media-amazon.com/images/I/410NFrzDJdL.jpg" class="cart-img">
+      <h2 class="cart-productName">Aesthetic Glow Women's Sneaker</h2>
+      <h3 class="cart-productPrice">Price - <span class="priceHolder" id="p6PriceHolder"></span></h3>
+      <h3 class="cart-productPrice"> Quantity - <span id="p6QuantityHolder" class="quantityHolder"></span>
+      <i class="fa-solid fa-plus" onclick="increment('p6')"></i>
+      <i class="fa-solid fa-minus" onclick="decrement('p6')"></i>
+    </h3>
+      <h3 class="cart-productPrice">Total Price - <span class="priceHolder" id="p6TotalPriceHolder"></span></h3>
+    </div>
+
+    <!-- P7 has moved after P8 due to css perection -->
+
+    <div id="p8" class="notDisplayed">
+      <img src="images/img_w2.jpg" class="cart-img">
+      <h2 class="cart-productName">Women's Premium Bestseller</h2>
+      <h3 class="cart-productPrice">Price - <span class="priceHolder" id="p8PriceHolder"></span></h3>
+      <h3 class="cart-productPrice"> Quantity - <span id="p8QuantityHolder" class="quantityHolder"></span>
+      <i class="fa-solid fa-plus" onclick="increment('p8')"></i>
+      <i class="fa-solid fa-minus" onclick="decrement('p8')"></i>
+    </h3>
+      <h3 class="cart-productPrice">Total Price - <span class="priceHolder" id="p8TotalPriceHolder"></span></h3>
+    </div>
+
+
+    <div id="p7" class="notDisplayed">
+      <img src="images/img_m4.jpg" class="cart-img">
+      <h2 class="cart-productName">Men's Premium Bestseller</h2>
+      <h3 class="cart-productPrice">Price - <span class="priceHolder" id="p7PriceHolder"></span></h3>
+      <h3 class="cart-productPrice"> Quantity - <span id="p7QuantityHolder" class="quantityHolder"></span>
+      <i class="fa-solid fa-plus" onclick="increment('p7')"></i>
+      <i class="fa-solid fa-minus" onclick="decrement('p7')"></i>
+    </h3>
+      <h3 class="cart-productPrice">Total Price - <span class="priceHolder" id="p7TotalPriceHolder"></span></h3>
+    </div>
+  </div>
+
+  <div class="col-md-4 col-sm-12" id="totalCalc">
+    <h3>Total Quantity: <span id="totalQuantityHolder">0</span></h3>
+  
+    <h3>Total Price: <span id="totalPriceHolder">0</span></h3>
+  
+    <h3>Discount (10%): <span id="discountHolder">0</span></h3>
+   
+    <h3>Final Price: <span id="finalPriceHolder">0</span></h3>
+
+    <button class="checkOut"><a href="notAvailable.html" target="_blank">CheckOut</a> </button>
+  </div>
+</div>
+</section>
+
+  <section id="testimonials">
+    <div id="carousel-act" class="carousel slide carousel-dark slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-act" data-slide-to="0" class="active dark"></li>
+        <li data-target="#carousel-act" data-slide-to="1"></li>
+        <li data-target="#carousel-act" data-slide-to="2"></li>
+
+      </ol>
+
+      <div class="carousel-inner">
+        <h1 class="section-heading orange">Reviews</h1>
+        <div class="carousel-item active">
+          <h2>
+            I have purchased this product. This is a unique design product -
+            having perfect fitting posture. Its grip is too awesome, and can
+            be used for dual purpose. One of the best thing I like about
+            product is toughness. Must have product. I would highly recommend
+            this product to anyone.
+          </h2>
+          <em>~ Sandeep Mishra</em>
+        </div>
+
+        <div class="carousel-item">
+          <h2 class="testimonial-text">
+            I got these shoes and loved the colour combination and it fits great... It is very comfortable to walk.
+            What's more is that - not only the quality is so strong and durable but also it will last long and also the
+            size will grow according to foot size. Totally tension free for my shoe needs now..
+          </h2>
+          <em>~ Gunjan Ahluwalia</em>
+        </div>
+
+        <div class="carousel-item">
+          <h2 class="testimonial-text">
+            These shoes are amazing and my son is enjoying every moment with it. Its easy to wear for kids, elite
+            materials, world-class craftsmanship, simple look.
+            These shoes are so flexible that they can be used for longer time as they can accommodate even if foot size
+            grows. Also, these shoes are stylish in such way that they can be used at all occasion. So, its ONE pairs
+            shoes for ALL occasions.
+          </h2>
+          <em>~ Sumit Kumar </em>
+        </div>
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#carousel-act" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+
+    <a class="carousel-control-next" href="#carousel-act" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+
+    </div>
+  </section>
+
+  <section id="footer">
+    <center>
+      <a href="notAvailable.html" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="notAvailable.html" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="notAvailable.html" target="_blank"><i class="fa fa-instagram"></i></a>
+      <a href="notAvailable.html" target="_blank"><i class="fa fa-youtube"></i></a>
+      <p>&#169 2022  &bull; Magic Joota  &bull; All Rights Reserved</p>
+    </center>
+  </section>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.6/dist/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
